@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Work — Open Homes Studio &amp; Interiors</title>
+  <meta name="description" content="Explore homes designed and built by Open Homes — luxury villas, premium flats and compact transformations across Delhi NCR.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.revealed { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="index.html" class="nav-brand">
+    <span class="brand-name">Open Homes</span>
+    <span class="brand-tag">Studio &amp; Interiors</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="work.html">Past Work</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="work.html">Past Work</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section id="work-hero">
+  <p class="section-eyebrow">Portfolio</p>
+  <h1>Every Home<br><em>Has a Story</em></h1>
+  <p>Four homes, four completely different briefs. Each one a full commitment to openness, craft and a family's vision of how they want to live.</p>
+</section>
+
+<!-- WORK GRID -->
+<section id="work-grid">
+  <div class="work-tiles">
+
+    <!-- Villa -->
+    <div class="work-tile reveal" onclick="openModal('villa')">
+      <div class="work-tile-bg ph-1 work-tile-ph">
+        Ultra-luxury G+2 Villa
+      </div>
+      <div class="work-tile-info">
+        <span class="work-type">Luxury Residential · Delhi NCR</span>
+        <h3>G+2 Luxury Villa</h3>
+      </div>
+      <div class="work-tile-overlay">
+        <button class="overlay-btn">View Details</button>
+      </div>
+    </div>
+
+    <!-- 4 BHK -->
+    <div class="work-tile reveal" style="transition-delay:0.1s" onclick="openModal('flat4')">
+      <div class="work-tile-bg ph-3 work-tile-ph">
+        Premium 4-BHK Flat
+      </div>
+      <div class="work-tile-info">
+        <span class="work-type">Premium Residential · Noida</span>
+        <h3>4-BHK Flat</h3>
+      </div>
+      <div class="work-tile-overlay">
+        <button class="overlay-btn">View Details</button>
+      </div>
+    </div>
+
+    <!-- 3 BHK -->
+    <div class="work-tile reveal" style="transition-delay:0.15s" onclick="openModal('flat3')">
+      <div class="work-tile-bg ph-2 work-tile-ph">
+        Family 3-BHK Flat
+      </div>
+      <div class="work-tile-info">
+        <span class="work-type">Standard Residential · Ghaziabad</span>
+        <h3>3-BHK Flat</h3>
+      </div>
+      <div class="work-tile-overlay">
+        <button class="overlay-btn">View Details</button>
+      </div>
+    </div>
+
+    <!-- 1 BHK -->
+    <div class="work-tile reveal" style="transition-delay:0.2s" onclick="openModal('flat1')">
+      <div class="work-tile-bg ph-4 work-tile-ph">
+        Compact 1-BHK Studio
+      </div>
+      <div class="work-tile-info">
+        <span class="work-type">Compact Residential · Delhi</span>
+        <h3>1-BHK Flat</h3>
+      </div>
+      <div class="work-tile-overlay">
+        <button class="overlay-btn">View Details</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:64px;" class="reveal">
+    <p style="color:var(--text-muted);margin-bottom:24px;font-style:italic;font-family:var(--font-display);font-size:1.2rem">More projects coming soon — our portfolio grows with every home.</p>
+    <a href="contact.html" class="btn-primary">Start Your Project</a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-brand">Open Homes — Studio &amp; Interiors</span>
+  <span>© 2025 openhomes.co.in · Delhi NCR, India</span>
+  <span>Beautiful Homes, Built Openly.</span>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="projectModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-hero">
+      <span class="work-type" id="modalType"></span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+    </div>
+    <div class="modal-body" id="modalContent"></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
